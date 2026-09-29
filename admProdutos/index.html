@@ -57,17 +57,17 @@
             <form action="">
                 <div class="inputs_form">
                     <div class="form_coluna1">
-                        <div class="linha_form">
+                        <div class="linha_form lf_coluna">
                             <label for="">nome</label>
                             <input placeholder="Ex: Opera Éternelle" type="text" name="" id="">
                         </div>
 
                         <div class="linha_form">
-                            <div class="input_cat">
+                            <div class="input_cat lf_coluna">
                                 <label for="">categorias</label>
                                 <input type="text" placeholder="Ex Café, Chocolate, Bolo">
                             </div>
-                            <div class="input_img">
+                            <div class="input_img lf_coluna">
                                 <span>imagem</span>
                                 <label for="img"><svg xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 640 640"><!--! Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. -->
@@ -78,7 +78,7 @@
                                 <input type="file" name="img" id="">
                             </div>
                         </div>
-                        <div class="linha_form">
+                        <div class="linha_form lf_coluna">
                             <label for="">descrição curta</label>
                             <textarea
                                 placeholder="Ex: O clássico parisiense: café arábica, chocolate amargo e biscuit jaconde"
@@ -87,19 +87,24 @@
                     </div>
 
                     <div class="form_coluna2">
-                        <div class="linha_form">
-                            <div class="input_valor">
+                        <div class="linha_form lf_linha">
+                            <div class="input_valor lf_coluna">
                                 <label for="">Valor por quilo</label>
                                 <input type="text" name="" id="">
                             </div>
-                            <div class="input_ativo">
+                            <div class="input_ativo lf_coluna">
                                 <label for="">ativo</label>
                                 <input type="checkbox" name="" id="">
                             </div>
-                            <div class="linha_form">
-                                <label for="">descrição</label>
-                                <textarea name="" id="" rows="7"></textarea>
-                            </div>
+                        </div>
+                        <div class="linha_form lf_coluna">
+                            <label for="">descrição longa</label>
+                            <textarea name="" id="" rows="7"
+                                placeholder="Ex: Um ícone da patisserie francesa, o Gâteau Opéra é
+uma celebração de texturas e sabores intensos. Composto por camadas finissimas de biscuit joconde embebido em xarope de café, entrelaçadas com um sedoso creme de manteiga de café e ganache de chocolate belga 70%. Cada fatia é uma viagem sensorial à Belle Époque de Paris."></textarea>
+                        </div>
+                        <div class="btn_link">
+                          <input type="submit" value="CADASTRAR">
                         </div>
                     </div>
                 </div>

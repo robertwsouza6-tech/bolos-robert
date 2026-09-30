@@ -8,6 +8,7 @@
     --corPrincipal: #FFF4F4;
     --fontHanken: "Hanken Grotesk", sans-serif;
     --corDourado: #C5A028;
+    --corSecundaria: #FDF8F8;
 }
 
 .container {
@@ -114,26 +115,26 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .box_h2 h2 {
     font-weight: 700;
-    font-size: 64px;
+    font-size: 36px;
     background-image: linear-gradient(0deg, #FFFFFF, #E9E9E9);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
+    line-height: 1.2;
 }
 
 .box_h2 span {
-    font-size: 32px;
-    position: absolute;
-    bottom: -10px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    position: static;
+    margin-top: 10px;
 }
 
 .box_h2 hr {
@@ -146,12 +147,14 @@ header {
 
 /* ---------- FORMULARIO */
 form {
-    background-color: cyan;
+    /* background-color: cyan; */
 }
 
 .inputs_form {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
 }
@@ -171,7 +174,8 @@ form {
 
 .form_coluna1,
 .form_coluna2 {
-    width: 414px;
+    max-width: 500px;
+    width: 80%;
 }
 
 .input_img span,
@@ -180,8 +184,9 @@ form {
     text-transform: uppercase;
     color: #444444;
     font-size: 12;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 10;
+
 }
 
 .inputs_form input[type=text],
@@ -228,21 +233,64 @@ form input[type=text] {
     margin-right: 20px;
 }
 
+
+.input_valor {}
+
 .input_valor input {
     margin-right: 20px;
-    width: 360px;
+    max-width: 360px;
 }
+
+.input_cat {}
 
 form input[type=button] {
     margin: 0 auto;
     display: block;
 }
 
-.btn_link input{
+.input_cat input,
+.input_valor input,
+.inputs_form textarea {
+    width: 100%;
+    margin-right: 0;
+}
+
+.btn_link input {
     background-color: #000000;
     color: #FFFFFF;
     border: none;
-    padding: 15px 30px;
+    padding: 16px 32px;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 12px;
+    display: flex;
+}
+
+/* ---------- LISTA DE PRODUTOS ---------- */
+.list_produtos {
+    background-color: var(--corSecundaria);
+}
+
+table {
+    background-color: aquamarine;
+    width: 100%;
+    font-family: var(--fontHanken);
+    text-transform: uppercase;
+}
+
+thead {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444444;
+}
+
+tbody {
+    color: #AAAAAA;
+}
+
+table svg {
+    width: 35px;
+}
 
 /* ---------- MEDIAS ---------- */
 @media screen and (max-widght: 768px) {
@@ -269,5 +317,11 @@ form input[type=button] {
     .box_h2 hr {
         margin-top: 10px;
         width: 70%;
+    }
+
+    /* ---------- FORMULARIO---------- */
+    .inputs_form {
+        flex-direction: column;
+        align-items: center;
     }
 }

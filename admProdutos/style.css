@@ -157,6 +157,7 @@ form {
     justify-content: center;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .lf_coluna {
@@ -183,9 +184,9 @@ form {
     font-family: var(--fontHanken);
     text-transform: uppercase;
     color: #444444;
-    font-size: 12;
-    font-weight: 700;
-    margin-bottom: 10;
+    font-size: 12px;
+    font-weight: 700px;
+    margin-bottom: 10px;
 
 }
 
@@ -207,7 +208,7 @@ form {
 }
 
 .inputs_form input[type=file] {
-    display: none
+    display: none;
 }
 
 .input_img label {
@@ -220,7 +221,7 @@ form {
 }
 
 input_img label:hover {
-    cursor: pointer
+    cursor: pointer;
 }
 
 form input[type=checkbox],
@@ -269,10 +270,12 @@ form input[type=button] {
 /* ---------- LISTA DE PRODUTOS ---------- */
 .list_produtos {
     background-color: var(--corSecundaria);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 table {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 100%;
     font-family: var(--fontHanken);
     text-transform: uppercase;
@@ -282,6 +285,8 @@ thead {
     font-size: 12px;
     font-weight: 600;
     color: #444444;
+    text-align: left;
+    border-collapse: collapse;
 }
 
 tbody {
@@ -290,6 +295,46 @@ tbody {
 
 table svg {
     width: 35px;
+    color: #bd0000;
+}
+
+th,
+td {
+    border-bottom: solid 1px #444444;
+    padding: 5px 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #FFF4F4;
+    min-height: 110px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.footer_container span,
+.nav_footer a {
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.nav_footer a {
+    text-decoration: none;
+    color: 747878;
 }
 
 /* ---------- MEDIAS ---------- */
@@ -318,10 +363,46 @@ table svg {
         margin-top: 10px;
         width: 70%;
     }
+    
+   .footer_container {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column; 
+    } 
 
-    /* ---------- FORMULARIO---------- */
-    .inputs_form {
-        flex-direction: column;
-        align-items: center;
-    }
+}
+
+/* ---------- FORMULARIO---------- */
+.inputs_form {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----- TABELA ----- */
+thead {
+    display: none;
+}
+
+tbody tr {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #444444;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: #00000040 5px 5px 5px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+tbody td {
+    border: none;
+}
+
+tbody td::before ": " {
+    content: attr(data-cell);
+    font-size: 12px;
+    color: #444444;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
 }
